@@ -856,7 +856,9 @@ class FindEmulatorImpl : public FindEmulator {
           !strcmp(ent->d_name, "..") ||
           !strcmp(ent->d_name, ".repo") ||
           !strcmp(ent->d_name, ".git") ||
-          !strcmp(ent->d_name, "out"))
+          !strcmp(ent->d_name, "out") ||
+          !strcmp(ent->d_name, ".TemporaryItems") ||
+          !strcmp(ent->d_name, ".Trashes"))
         continue;
 
       string npath = path;
